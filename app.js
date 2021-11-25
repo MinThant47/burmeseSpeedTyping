@@ -20,7 +20,6 @@ let mistakes = 0;
 
 //Display random quotes
 const renderNewQuote = async () => {
-  quoteSection.innerHTML = "";
   //Access quote
   var quote = text[Math.floor(Math.random() * text.length)];
 
@@ -73,8 +72,7 @@ userInput.addEventListener("input", () => {
     });
     //End test if all characters are correct
     if (check) {
-      renderNewQuote();
-      userInput.value = "";
+      displayResult();
     }
   });
 });
